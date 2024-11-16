@@ -17,10 +17,10 @@ La API que usarás es [JSONPlaceholder](https://jsonplaceholder.typicode.com/), 
 - **Lista de Usuarios**: `https://jsonplaceholder.typicode.com/users`
 
 ## 🛠️ **Instrucciones**
-1. Crea un proyecto de Vue.js usando **Vite** o **Vue CLI**.
-2. Consume la API para obtener la lista de usuarios.
-3. Muestra los usuarios en una lista, incluyendo el nombre y correo electrónico de cada uno.
-4. Al hacer clic en un usuario, muestra una vista con los detalles del usuario:
+1. [x] Crea un proyecto de Vue.js usando **Vite** o **Vue CLI**.
+2. [x] Consume la API para obtener la lista de usuarios.
+3. [x] Muestra los usuarios en una lista, incluyendo el nombre y correo electrónico de cada uno.
+4. [x] Al hacer clic en un usuario, muestra una vista con los detalles del usuario:
    - Nombre
    - Nombre de usuario (username)
    - Correo electrónico

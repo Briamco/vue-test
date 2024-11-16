@@ -27,8 +27,8 @@ La API que usarás es [JSONPlaceholder](https://jsonplaceholder.typicode.com/), 
    - Teléfono
    - Sitio web
    - Dirección (calle y ciudad)
-5. Agrega un **indicador de carga** mientras se obtienen los datos.
-6. Muestra un **mensaje de error** si la API falla.
+5. [x] Agrega un **indicador de carga** mientras se obtienen los datos.
+6. [x] Muestra un **mensaje de error** si la API falla.
 
 ## 📂 **Estructura Sugerida del Proyecto**
 ```

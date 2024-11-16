@@ -3,10 +3,10 @@
     <h1 class="text-3xl font-bold">Lista de usuarios</h1>
     <ul class="flex flex-wrap gap-3">
       <li 
-        v-for="user in users" 
+        v-for="user in (users || [])" 
         :key="user.id"
-        @:click="selectUser(user)"
-        class="grid px-3 py-3 transition-transform border w-fit rounded-xl hover:scale-105"
+        @click="handleClick(user)"
+        class="grid px-3 py-3 transition-transform border cursor-pointer w-fit rounded-xl hover:scale-105"
       >
         <h3 class="text-xl font-bold">
           {{ user.name }}
@@ -17,25 +17,19 @@
       </li>
     </ul>
 
-    <userDetail v-if="selectedUser" :user="selectedUser" />
   </main>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import userDetail from './userDetail.vue'
+import { defineProps, defineEmits } from 'vue';
 
-const users = ref([])
-const selectedUser = ref(null)
-
-const selectUser = (user) => {
-  selectedUser.value = user
-}
-
-onMounted(() => {
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(json => users.value = json)
+const props = defineProps({
+  users: Array
 })
 
+const emit = defineEmits(['selectUser'])
+
+const handleClick = (user) => {
+  emit('selectUser', user)
+}
 </script>

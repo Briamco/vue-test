@@ -6,7 +6,7 @@
     <p>Email: {{ user.email }}</p>
     <p>Telefono: {{ user.phone }}</p>
     <p>Pagina Web: {{ user.website }}</p>
-    <p>Direccion: {{ user.address.street }}, {{ user.address.city }}</p>
+    <p>Direccion: {{ user.address?.street }}, {{ user.address?.city }}</p>
   </div>
 </template>
 
@@ -14,6 +14,9 @@
   import { defineProps } from 'vue';
 
   const props = defineProps({
-    user : Object
+    user : {
+      type: Object,
+      required: true
+    }
   })
 </script>
